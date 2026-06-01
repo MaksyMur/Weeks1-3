@@ -14,16 +14,16 @@ public class CloudMove : MonoBehaviour
 
     void Update()
     {
-        // Get current position
+        //Current position of a cloud
         Vector3 newPosition = transform.position;
 
-        // Move cloud
+        //Move cloud
         newPosition.x += speed * Time.deltaTime;
 
-        // Apply new position
+        
         transform.position = newPosition;
 
-        // Change direction at edges
+        //Change direction at edges
         if (newPosition.x > xMax)
         {
             speed = -speed;

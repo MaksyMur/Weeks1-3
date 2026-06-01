@@ -11,7 +11,10 @@ public class GirlFollowMouse : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //girl miving with the mouse
+        //mouse pos in screen space
         Vector3 mousePos = Input.mousePosition;
+
 
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
         worldPos.z = 0;
