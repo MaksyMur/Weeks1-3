@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SquareMover : MonoBehaviour
 {
-   public float speed = 0.01f;
+   public float speed = 0.01f*Time.deltaTime;
     float xMax = 8.30f;
     float xMin = -8.30f;
     
@@ -23,12 +23,12 @@ public class SquareMover : MonoBehaviour
         transform.position = newPosition;
         if (newPosition.x > xMax)
         {
-            speed = -0.01f;
+            speed = -0.01f*Time.deltaTime;
             // speed = - speed; // other option
         }
         if (newPosition.x < xMin)
         {
-            speed = 0.01f;
+            speed = 0.01f*Time.deltaTime;
         }
     }
 }
